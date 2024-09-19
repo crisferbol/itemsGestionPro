@@ -4,6 +4,8 @@ from .models import producto
 from .models import solicitud
 
 
+
+
 # Register your models here.
 
 admin.site.register(cliente)

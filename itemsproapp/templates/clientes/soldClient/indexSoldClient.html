@@ -1,15 +1,9 @@
-{% extends "funcionarios/plantilla.html" %}
-
-{% block titulo %} Solicitudes {% endblock %}
+{% extends "clientes/plantClient.html" %}
 
 {% block contenido %}
-
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h4 class="card-title mb-0">Solicitudes</h4>
-            <div class="row justify-content-end">
-                <a href="{% url 'crear_sold' %}" style="background-color: #18962d; color: white; border: none; padding: 9px; border-radius: 10px; cursor: pointer; text-decoration: none;">Ingresar Solicitud</a>
-            </div>                        
+            <h4 class="card-title mb-0">Solicitudes</h4>                 
         </div>
         
         <div class="card-body"></div>
@@ -18,7 +12,6 @@
                 <table class ="table table-primary"> 
                     <thead>
                         <tr>
-                            <th scope ="col">Id Sold</th>
                             <th scope ="col">NIT</th>
                             <th scope ="col">Fecha de solicitud</th>
                             <th scope ="col">Nombre Cliente</th>
@@ -27,13 +20,11 @@
                             <th scope ="col">Direccion</th>
                             <th scope ="col">Telefono</th>
                             <th scope ="col">Correo</th>
-                            <th scope ="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for solicitud in solicitudesAdmin %}
                             <tr class ="">
-                                <td scope="row">{{ solicitud.idSold }}</td>
                                 <td>{{solicitud.nitSold}}</td>
                                 <td>{{ solicitud.fecha_de_solicitud|date:"Y-m-d" }}</td>
                                 <td>{{solicitud.nombre_cliente}}</td>
@@ -42,10 +33,6 @@
                                 <td>{{solicitud.direccion_cliente}}</td>
                                 <td>{{solicitud.tel_admin}}</td>
                                 <td>{{solicitud.correo_admin}}</td>
-                                <td>                              
-                                    <a class="btn btn-info" href="{% url 'editar_sold' solicitud.idSold %}" role="button">Editar</a>                         
-                                    <a class="btn btn-danger sombra-boton" href="{% url 'borrar_sold' solicitud.idSold %}" role="button">Borrar</a>                          
-                                </td>
                             </tr>
                         {% endfor %}    
                     </tbody>

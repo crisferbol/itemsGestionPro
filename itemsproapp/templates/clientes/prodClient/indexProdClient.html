@@ -10,7 +10,6 @@
                 <table class="table table-secondary text-center align-middle">
                     <thead>
                         <tr>
-                            <th scope="col">idProd</th>
                             <th scope="col">Descripcion Producto</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Foto de Referencia</th>
@@ -20,7 +19,6 @@
                     <tbody>
                         {% for producto in productos %}
                             <tr>
-                                <td scope="row">{{ producto.idProd }}</td>
                                 <td>{{ producto.nombreProd }}</td>
                                 <td>{{ producto.marcaProd }}</td>
                                 <td style="text-align: center; vertical-align: middle;">

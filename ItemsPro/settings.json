@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "path/a/tu/entorno/virtual/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.analysis.extraPaths": [
+        "./your_project_root"
+    ]
+}

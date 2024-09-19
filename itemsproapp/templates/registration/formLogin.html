@@ -1,0 +1,39 @@
+<form method="POST" action="/accounts/login/">
+    {% csrf_token %}
+    
+    <!-- Selección de tipo de usuario -->
+    <div class="mb-3 row">
+        <label for="user-type" class="col-sm-5 col-form-label">
+            <i class="fa-solid fa-users" style="font-size: 2rem;"></i> Tipo de usuario
+        </label>
+        <div class="col-sm-7">
+            <select class="form-select" id="user-type" name="user_type" required>
+                <option value="cliente">Cliente</option>
+                <option value="funcionario">Funcionario</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Campo de email -->
+    <div class="mb-3 row">
+        <label for="email" class="col-sm-5 col-form-label">
+            <i class="fa-solid fa-at" style="font-size: 2rem;"></i> Usuario
+        </label>
+        <div class="col-sm-7">
+            <input type="email" class="form-control" id="" name="email" placeholder="Ingrese su correo electrónico" required>
+        </div>
+    </div>
+
+    <!-- Campo de contraseña -->
+    <div class="mb-3 row">
+        <label for="password" class="col-sm-5 col-form-label">
+            <i class="fa-solid fa-key" style="font-size: 2rem;"></i> Contraseña
+        </label>
+        <div class="col-sm-7">
+            <input type="password" class="form-control" id="" name="password" placeholder="Ingrese su contraseña" required>
+        </div>
+    </div>
+
+    <!-- Botón de envío -->
+    <button type="submit" class="btn btn-primary w-100 float-start">Iniciar Sesión</button>
+</form>
