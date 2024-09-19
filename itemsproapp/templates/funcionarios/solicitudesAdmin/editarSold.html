@@ -1,0 +1,18 @@
+{% extends "funcionarios/plantilla.html" %}
+
+{% block titulo %} Editar Solicitudes {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">Editar Solicitud</div>
+    <div class="card-body">
+        <h4 class="card-title">Productos</h4>
+
+        {%include "funcionarios/solicitudes/formSold.html"%}
+
+    </div>
+    <div class="card-footer text-muted">Datos para crear Productos</div>
+</div>
+
+{% endblock %}

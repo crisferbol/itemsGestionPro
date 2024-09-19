@@ -1,0 +1,13 @@
+{% extends "funcionarios/plantilla.html" %}
+
+{% block titulo %} Añadir Solicitud {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header"><h4>Agregar Solicitud</h4></div>
+    <div class="card-body">
+        
+        {% include "funcionarios/solicitudesAdmin/formSold.html"%}
+
+{% endblock %}

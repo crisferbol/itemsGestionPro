@@ -1,0 +1,37 @@
+{% extends "clientes/plantClient.html" %}
+
+{% block contenido %}
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="card-title mb-0">Productos</h4>                       
+        </div>       
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-secondary text-center align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">idProd</th>
+                            <th scope="col">Descripcion Producto</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Foto de Referencia</th>
+                            <th scope="col">Marca</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in productos %}
+                            <tr>
+                                <td scope="row">{{ producto.idProd }}</td>
+                                <td>{{ producto.nombreProd }}</td>
+                                <td>{{ producto.marcaProd }}</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <img src="{{ producto.fotoProd.url }}" alt="Foto_producto" width="100px">
+                                </td>
+                                <td>{{ producto.modeloProd }}</td>                                                   
+                            </tr>
+                        {% endfor %}   
+                    </tbody>
+                </table>
+            </div>                        
+        </div>
+    </div>
+{% endblock %}

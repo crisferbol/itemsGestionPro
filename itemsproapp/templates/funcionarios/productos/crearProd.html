@@ -1,0 +1,13 @@
+{% extends "funcionarios/plantilla.html" %}
+
+{% block titulo %} Añadir Productos {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header"><h4>Añadir Productos</h4></div>
+    <div class="card-body">
+        
+        {% include "funcionarios/productos/formProd.html" %}
+
+{% endblock %}
